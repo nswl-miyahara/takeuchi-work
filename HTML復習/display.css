@@ -1,0 +1,41 @@
+body{
+    background-image: url("cafe1.jpg");
+    /* 背景画像を画面全体に表示 */
+    background-size: cover;  
+}
+
+a{
+    color: #fff;
+}
+
+.midashi {
+    margin: 0;
+    position: relative;
+    font-size: 75px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.after {
+    display: block;
+    font-size: 20px;
+    margin-top: 10px;
+    position: relative;
+    width: 160px;
+    margin: 10px auto 0;
+    
+}
+
+.after:before {
+    content: '';
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+    width: 300px;
+    left: -60px;
+}
+
