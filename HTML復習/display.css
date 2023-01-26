@@ -1,5 +1,5 @@
 body{
-    background-image: url("cafe1.jpg");
+    background-image: url("bg1.jpg");
     /* 背景画像を画面全体に表示 */
     background-size: cover;  
 }
@@ -37,5 +37,24 @@ a{
     z-index: -1;
     width: 300px;
     left: -60px;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    
+}
+
+dialog {
+    width: 250px;
+    padding: 30px 20px;
+    border: 1px #aaa;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1em #888;
+    background-color: tan;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    text-align: center;
+    font-weight: 600;
 }
 

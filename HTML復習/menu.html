@@ -4,13 +4,18 @@
         <meta charset="UTF-8">
         <link href="display.css" rel="stylesheet">
 
-        <title>スタイルシート</title>
+        <title>メニュー画面</title>
         <style>
             article p{ width: 200px;
-                height: 150px;
+                height: 200px;
                 padding: 30px;
                 border: 3px #dcdcdc solid;
                 margin: 30px;
+                box-shadow: -6px 6px #ffffff; 
+                color:#ffffff;
+                font-size: 18px;
+                font-family: 'Times New Roman', Times, serif;
+                background-image: url("bg2.jpg");
             }
             header ul{
                 display:flex;
@@ -23,9 +28,13 @@
                 border: solid 1px #ffffff;
                 padding: 6px 30px;
             }
-            article{ display: flex;}
+            article{ display: flex;
+                     justify-content: center;
+                     align-items: center;
+            }
 
         </style>
+
     </head>
     <body>
         <header>
@@ -36,6 +45,96 @@
                 <li><a href="information.html">information</a></li>
             </ul>
         </header>
+
+        <h1>～　MENU　～</h1>
+        <br>
+        <table border="3" width="100%">
+            <tbody>
+                <tr>
+                    <td width="33%">
+                        <img src="napoli.jpg" alt="画像１" width="98%">
+                    </td>
+                    <td width="33%">
+                        <img src="chocora.jpg" alt="画像２" width="98%">
+                    </td>
+                    <td width="33%">
+                        <img src="float.jpg" alt="画像３" width="98%">
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+            
+            <!-- ダイアログに表示する内容 -->
+            <dialog id="exDialog1">
+                <p>LUNCH TIME: AM11:30~13:30</p>おすすめはナポリタンです。<br>
+                <button id="btn_close1">close</button>
+            </dialog>
+
+            <dialog id="exDialog2">
+                <p>Dessertは15時からです。</p>
+                <button id="btn_close2">close</button>
+            </dialog>
+
+            <dialog id="exDialog3">
+                <p>ドリンクは２杯目から半額です。</p>
+                <button id="btn_close3">close</button>
+            </dialog>
+
+            <!--メニューボックスに表示する内容-->
+            <article>
+                <p><strong><button id="btn_show1">▶</button> Lunch</strong><br><br>
+                     Neapolitan &ensp;&ensp;&ensp; ￥950<br><br>
+                     Pizza toast &ensp;&ensp;&ensp; ￥830<br><br>
+                     Original sand &ensp; ￥810</p>
+                <p><strong><button id="btn_show2">▶</button> Dessert</strong><br><br>
+                     Gateau chocolat &nbsp;&ensp; ￥600<br><br>
+                     Pudding &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; ￥550<br><br>
+                     Scone &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; ￥430</p>
+                <p><strong><button id="btn_show3">▶</button> Drink</strong><br><br>
+                     coffee &ensp;&ensp;&ensp;&ensp;&ensp; ￥550<br><br>
+                     cafe latte &ensp;&ensp;&ensp;&ensp; ￥600<br><br>
+                     coffee float &ensp;&ensp;&ensp; ￥680</p>
+            </article>
+
+            <script>
+                // lunchメニューのボタンが押されたとき
+                var btn_show1 = document.getElementById('btn_show1');
+                var btn_close1 = document.getElementById('btn_close1');
+                var exDialog1 = document.getElementById('exDialog1');
+
+                btn_show1.addEventListener('click',function(){
+                    exDialog1.showModal();
+                });
+                btn_close1.addEventListener('click',function(){
+                    exDialog1.close();
+                });
+
+                // Dessertメニューのボタンが押されたとき
+                var btn_show2 = document.getElementById('btn_show2');
+                var btn_close2 = document.getElementById('btn_close2');
+                var exDialog2 = document.getElementById('exDialog2');
+
+                btn_show2.addEventListener('click',function(){
+                    exDialog2.showModal();
+                });
+                btn_close2.addEventListener('click',function(){
+                    exDialog2.close();
+                });
+
+                // Drinkメニューのボタンが押されたとき
+                var btn_show3 = document.getElementById('btn_show3');
+                var btn_close3 = document.getElementById('btn_close3');
+                var exDialog3 = document.getElementById('exDialog3');
+
+                btn_show3.addEventListener('click',function(){
+                    exDialog3.showModal();
+                });
+                btn_close3.addEventListener('click',function(){
+                    exDialog3.close();
+                });
+            
+            </script>
+        
 
         </body>
         </html>
