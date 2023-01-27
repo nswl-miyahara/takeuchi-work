@@ -1,7 +1,8 @@
 body{
     background-image: url("bg1.jpg");
     /* 背景画像を画面全体に表示 */
-    background-size: cover;  
+    background-size: cover; 
+    font-family: 'Times New Roman', Times, serif; 
 }
 
 a{
@@ -57,4 +58,42 @@ dialog {
     text-align: center;
     font-weight: 600;
 }
+
+.top-right {
+    text-align: center;
+}
+
+.slider {
+ width: 600px;
+ height: 400px;
+ overflow: hidden;
+ margin: 0 auto;
+  
+  }
+  .slider-item {
+    width: 400px;
+    float: left;
+  }
+  img{
+    width:100%;
+  }
+  .slider-inner {
+    width: 400%;
+    animation: slider 10s infinite ease;
+  }
+  
+  @keyframes slider {
+      0% {
+      transform: translateX(0);
+      }
+      33% {
+      transform: translateX(-300px);
+      }
+      66% {
+      transform: translateX(-600px);
+      }
+      100% {
+      transform: translateX(0);
+      }
+  }
 
